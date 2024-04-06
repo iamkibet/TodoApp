@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo - App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-gradient-to-r from-black to-gray-500 text-white">
+    <div class="flex justify-center mt-10 h-[100vh]">
+      <div id="todo-container" class="">
+        <div id="header">
+          <h1 class="text-3xl font-bold my-4">Todo App</h1>
+        </div>
+        <div id="todo-form" class="flex flex-row gap-4 items-center">
+          <input
+            class="p-1 rounded-sm text-black"
+            type="text"
+            placeholder="Add a new task"
+            id="input-box"
+            name="input-box"
+          />
+          <button
+            class="py-2 px-5 me-2 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700"
+            id="add-button"
+            onclick="addTask()"
+          >
+            Add
+          </button>
+        </div>
+        <h2 class="text-xl font-bold my-4">Task List</h2>
+        <ul class="my-2" id="task-list"></ul>
+        <hr />
+        <div class="my-3 text-lg">
+          <div id="task-counters">
+            <span>Complete: <span id="completed-counter">0</span></span> |
+            Uncomplete:
+            <span id="uncompleted-counter">0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
